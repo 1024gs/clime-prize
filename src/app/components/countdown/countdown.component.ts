@@ -6,7 +6,7 @@ import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-countdown',
-  template: `<span>{{ seconds }}</span>`,
+  template: `<span>{{ seconds | secondsToTime }}</span>`,
   styleUrls: ['./countdown.component.sass'],
 })
 export class CountdownComponent implements OnInit, OnDestroy {
