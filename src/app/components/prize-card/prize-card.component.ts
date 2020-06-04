@@ -8,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
         50 Free Spins <br />
         on Gemix
       </h5>
-      <p class="card-text">00:00</p>
+      <p class="card-text">
+        <app-countdown
+          [seconds]="5"
+          (complete)="onComplete()"
+        ></app-countdown>
+      </p>
       <button type="button" class="btn btn-primary">Claim now</button>
     </div>
   </div>`,
@@ -18,4 +23,8 @@ export class PrizeCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onComplete() {
+    console.log('oncomplete');
+  }
 }
