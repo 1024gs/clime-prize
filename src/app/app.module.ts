@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { PrizeCardComponent } from './prize-card/prize-card.component';
+import { PrizeCardComponent } from './components/prize-card/prize-card.component';
 
 @NgModule({
   declarations: [
