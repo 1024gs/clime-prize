@@ -8,8 +8,9 @@
     font-size: 35px
     color: #252525
     letter-spacing: 0
-    text-align: center
     line-height: 47px
+    max-width: 340px
+    margin: 0 auto
 
 .card-text
     font-family: HelveticaNeue-Medium
@@ -33,5 +34,19 @@
         font-size: 22px
         line-height: 35px
         letter-spacing: 1px
+
+.card:not(.claimed)
+    .btn-primary
         &[disabled]
             filter: grayscale(0.7)
+
+.card.claimed
+    .card-title
+        color: #00A49C
+        margin-top: 15px
+
+    .btn-primary
+        background-image: none
+        background-color: #DDE4E4
+        box-shadow: none
+        margin-top: 35px
