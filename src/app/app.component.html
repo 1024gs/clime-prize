@@ -1,5 +1,6 @@
 <div class="app">
   <div class="container">
-    <app-prize-card></app-prize-card>
+    <span *ngIf="isLoading">Loading...</span>
+    <app-prize-card *ngIf="!isLoading" [prize]="prize"></app-prize-card>
   </div>
 </div>
