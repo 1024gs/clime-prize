@@ -11,7 +11,7 @@ import { take } from 'rxjs/operators';
 })
 export class CountdownComponent implements OnInit, OnDestroy {
   @Input() seconds: number;
-  @Output() complete = new EventEmitter();
+  @Output() done = new EventEmitter();
 
   subscription: Subscription;
 
@@ -19,12 +19,12 @@ export class CountdownComponent implements OnInit, OnDestroy {
     this.subscription = interval(1000)
       .pipe(take(this.seconds))
       .subscribe(
-        () => {--this.seconds},
+        () => {--this.seconds; },
         undefined,
-        () => {this.complete.emit()}
+        () => {this.done.emit(); }
       );
   }
-  
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

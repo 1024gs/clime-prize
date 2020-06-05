@@ -15,7 +15,7 @@
       <p class="card-text" *ngIf="!prize.claimed">
         <app-countdown
           [seconds]="prize.countdown"
-          (complete)="onTimeout()"
+          (done)="onTimeout()"
         ></app-countdown>
       </p>
       <button

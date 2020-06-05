@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     this.isLoading = true;
     this.prizesService
       .getOne('50-free-spins')
-      .subscribe((response) => {this.prize = response})
-      .add(() => {this.isLoading = false});
+      .subscribe((response) => {this.prize = response; })
+      .add(() => {this.isLoading = false; });
   }
 }
